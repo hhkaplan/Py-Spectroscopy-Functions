@@ -52,16 +52,18 @@ def HullFitContinuumRemoval(Data, lwav, rwav):
         Cont_Rem[:,col] = np.divide(new_spec[:,1], Cont_Fit[:,col])
         
         #Plot the results
-        plt.figure()
+        fig1 = plt.figure()
         plt.plot(new_spec[:,0], new_spec[:,1], 'b-', lw=1)
         plt.plot(upperhull_pts[:,0], upperhull_pts[:,1], 'ro')
         plt.plot(new_spec[:,0], Cont_Fit[:,col], 'r-',lw =1)
         plt.title("Sample "+ str(col))
-        plt.show()
+        #plt.show()
         
-        plt.figure()
+        fig2 = plt.figure()
         plt.plot(Cont_Rem[:,col], 'b-',lw =1)
         plt.title("Sample "+ str(col))
     
     #returns   
     return(Cont_Fit, Cont_Rem)
+    return(fig1)
+    return(fig2)
