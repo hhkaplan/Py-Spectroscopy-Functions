@@ -39,4 +39,4 @@ def ConcatenateFTIROutputs(directory):
     
     #Sort data and return
     n = newData[newData[:,0].argsort(),:]
-    return n
+    return(n)
