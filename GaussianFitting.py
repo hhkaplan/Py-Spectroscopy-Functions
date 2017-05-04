@@ -80,7 +80,7 @@ def PseudoVoigtFunction(x,*a):
 
 
 #Inputs
-def FittingFunction(Data, Wavelengths, Func, maxWidth = 0.03, maxShift = 0.001):
+def FittingFunction(Data, Wavelengths, func, maxWidth = 0.03, maxShift = 0.001):
 #Data = np.load('/Users/hannahkaplan/Desktop/GR_ContRem.npy')
 #Wavelengths = [3.31,3.35, 3.38, 3.42, 3.46, 3.50]
 #maxWidth = 0.03
@@ -141,3 +141,6 @@ def FittingFunction(Data, Wavelengths, Func, maxWidth = 0.03, maxShift = 0.001):
         for i in range(0,np.shape(popts)[1]):
             plt.plot(xdata,func(xdata,popts[:,i]), lw= 0.5)
         plt.show()
+    
+    return(fig)    
+    return(results)
